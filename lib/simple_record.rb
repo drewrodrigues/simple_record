@@ -1,9 +1,7 @@
+require_relative "pluralize"
 require "sqlite3"
 require "byebug"
 
-# TODO create #create method
-# Upon inclusion, IDable will allow basic class instance management as well
-# as assigning IDs for each new instance that is created.
 class SimpleRecord
   DB = SQLite3::Database.open "time_alloc.db"
   TABLES = {
